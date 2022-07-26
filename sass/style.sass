@@ -1,0 +1,691 @@
+@charset "UTF-8"
+
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  font-family: "Roboto", "Noto Sans TC", "微軟正黑體", sans-serif
+  word-break: break-word
+
+html
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+  padding: 0
+  padding-top: 68px
+
+$brand-orange: #F8B616
+$brand-blue: #86C0E9
+$light-orange: #FEF8EC
+
+$black : #1D1D1D
+$gray-70: #333333
+$gray-50: #727272
+$gray-30: #BBBBBB
+$gray-10: #F5F5F5
+$white: #FFFFFF
+
+=flexCenter($jc: center,$ai: center,$fd: row)
+  display: flex
+  justify-content: $jc
+  align-items: $ai
+  flex-direction: $fd
+=mp($m:0,$p:0)
+  margin: $m
+  padding: $p 
+=posaCenter
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+=bg
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+=hw($h:100%,$w:$h)
+  height: $h
+  width: $w
+
+
+// Font
+h1
+  font-size: 72px !important
+  color: $black !important
+  line-height: 1.2 !important
+  font-weight: 700
+  font-family: "Poppins", "Noto Sans TC", "微軟正黑體", sans-serif !important
+
+h2
+  font-size: 42px !important
+  color: $black !important
+  line-height: 0.6 !important
+  font-weight: 700
+
+h3
+  font-size: 28px !important
+  color: $black !important
+  line-height: 1.5 !important
+  font-weight: 700 !important
+
+h4
+  font-size: 24px !important
+  color: $black !important
+  line-height: 1.5 !important
+  font-weight: 700 !important
+
+h5
+  font-size: 18px !important
+  color: $gray-70 !important
+  line-height: 1 !important
+  font-weight: 500 !important
+
+h6
+  font-size: 16px !important
+  color: $gray-30 !important
+  font-weight: 300 !important
+
+p
+  font-size: 20px !important
+  color: $black !important
+  letter-spacing: 1px !important
+  line-height: 1.5 !important
+
+@media (max-width: 767.98px)
+  h1
+    font-size: 54px !important
+  h2
+    font-size: 32px !important
+  h3
+    font-size: 24px !important
+  h4
+    font-size: 20px !important
+  h5
+    font-size: 16px !important
+  h6
+    font-size: 14px !important
+  p
+    font-size: 18px !important
+
+.fz-18
+  font-size: 18px !important
+
+.fz-20
+  font-size: 20px !important
+
+.fz-22
+  font-size: 22px !important
+
+.fz-32
+  font-size: 32px !important
+
+@media (max-width: 767.98px)
+  .fz-mb-24
+    font-size: 24px !important
+
+  .fz-mb-16
+    font-size: 16px !important
+
+
+a
+  color: $black 
+  text-decoration: none !important
+  &:hover
+    text-decoration: none !important
+
+img
+  //width: auto !important
+  max-width: 100% !important
+  height: auto !important
+  object-fit: cover !important
+
+.object-fit-contain
+  object-fit: contain !important
+
+iframe
+  max-width: 100% !important
+
+blockquote
+  padding-left: 10px !important
+  border-left: 5px solid $gray-10 !important
+
+
+//Spacing 空間設置
+.mt--10
+  margin-top: -10px !important
+
+.mt-5px
+  margin-top: 5px !important
+
+.mt-10
+  margin-top: 10px !important
+
+.mt-15
+  margin-top: 15px !important
+
+.mt-20
+  margin-top: 20px !important
+
+.mt-30
+  margin-top: 30px !important
+
+.mt-50
+  margin-top: 50px !important
+
+.mt-80
+  margin-top: 80px !important
+
+.mb-0
+  margin-bottom: 0px !important
+
+.mb-4px
+  margin-bottom: 4px !important
+
+.mb-5px
+  margin-bottom: 5px !important
+
+.mb-10
+  margin-bottom: 10px !important
+
+.mb-15
+  margin-bottom: 15px  !important
+
+.mb-20
+  margin-bottom: 20px  !important
+
+.mb-30
+  margin-bottom: 30px  !important
+
+.mb-50
+  margin-bottom: 50px  !important
+
+.mb-80
+  margin-bottom: 80px  !important
+
+.mr-5px
+  margin-right: 5px  !important
+
+.mr-20
+  margin-right: 20px  !important
+
+.ml-5px
+  margin-left: 5px  !important
+
+.my-10
+  margin-top: 10px  !important
+  margin-bottom: 10px !important
+
+.my-15
+  margin-top: 15px  !important
+  margin-bottom: 15px  !important 
+
+.p-10
+  padding: 10px !important
+
+.p-13
+  padding: 13px !important
+
+.p-20
+  padding: 20px !important
+
+.p-12
+  padding: 10px 20px !important
+
+.p-23
+  padding: 20px 30px !important
+
+.p-15
+  padding: 10px 50px !important
+
+.p-25
+  padding: 20px 50px !important
+
+.p-30
+  padding: 30px !important
+
+.p-43
+  padding: 40px 30px !important
+
+.p-45
+  padding: 40px 50px !important
+
+.p-50
+  padding: 50px !important
+
+.p-510
+  padding: 50px 100px !important
+
+.pl-20
+  padding-left: 20px !important
+
+.pl-50
+  padding-left: 50px !important
+
+.pr-50
+  padding-right: 50px !important
+
+.pb-10
+  padding-bottom: 10px !important
+
+.pb-80
+  padding-bottom: 80px !important
+
+.px-5px
+  padding-left: 5px !important
+  padding-right: 5px !important
+
+
+.px-15
+  padding-left: 15px !important
+  padding-right: 15px !important
+
+.py-58
+  padding-top: 50px !important
+  padding-bottom: 80px !important
+
+.py-50
+  padding-top: 50px !important
+  padding-bottom: 50px !important
+
+@media (max-width: 1199.98px)
+
+
+@media (max-width: 767.98px)
+  .mb-mb-0
+    margin-bottom: 0 !important
+
+  .mt-mb-0
+    margin-top: 0 !important
+
+  .mt-mb-30
+    margin-top: 30px !important
+
+  .p-md-10
+    padding: 10px !important
+
+  .p-mb-20
+    padding: 20px !important
+
+  .p-mb-32
+    padding: 30px 20px !important
+
+  .pr-mb-5
+    padding-right: 5px !important
+
+  .pl-mb-5
+    padding-left: 5px !important
+
+  .px-mb-8
+    padding-left: 8px !important
+    padding-right: 8px !important
+
+  .px-mb-150
+    padding-left: 15px !important
+    padding-right: 0px !important
+
+  .px-mb-015
+    padding-left: 0px !important
+    padding-right: 15px !important
+
+//Sizing 尺寸設置
+
+.h-1px
+  height: 1px !important
+
+.h-2px
+  height: 2px !important
+ 
+.h-40px
+  height: 40px !important
+
+.h-50px
+  height: 50px !important
+
+.h-60px
+  height: 60px !important
+
+.h-80px
+  height: 80px !important
+
+.h-100px
+  height: 100px !important
+
+.h-200px
+  height: 200px !important
+
+.h-250px
+  height: 250px !important
+
+.h-300px
+  height: 300px !important
+
+.h-400px
+  height: 400px !important
+
+.h-500px
+  height: 500px !important
+
+.h-600px
+  height: 600px !important
+
+.h-700px
+  height: 700px !important
+
+.h-100pc
+  height: 100% !important
+
+.w-50px
+  width: 50px !important
+
+.w-60px
+  width: 60px !important
+
+.w-100px
+  width: 100px !important
+
+.w-500px
+  width: 500px !important
+
+.w-800px
+  width: 800px !important
+
+.w-20pc
+  width: 20% !important
+
+.w-60pc
+  width: 60% !important
+
+.w-60vw
+  width: 60vw !important
+
+.w-mx-60vw
+  max-width: 60vw !important
+
+.w-mx-1000
+  max-width: 1000px !important
+
+@media (max-width: 1199.98px)
+  .w-tb-100pc
+    width: 100% !important
+
+  .w-tb-75
+    width: 75% !important
+
+@media (max-width: 767.98px)
+  .h-mb-300
+    height: 300px !important
+
+  .w-mb-80pc
+    width: 80% !important
+
+  .w-mb-100pc
+    width: 100% !important
+
+//Border 外框設置
+.rounded-10
+  border-radius: 10px !important
+
+.rounded-10-10-0-0
+  border-radius: 10px 10px 0 0 !important
+
+.border-none
+  border: 0 !important
+
+.border-brand-orange
+  border: solid 1px $brand-orange !important
+
+.border-black
+  border: solid 1px $black !important
+
+.border-bottom-2px
+  border-bottom: 2px solid $brand-orange !important
+  
+
+//Background
+.bg-basic
+  background-position: center !important
+  background-repeat: no-repeat !important
+  background-size: cover !important
+
+.bg-fixed
+  background-attachment: fixed !important
+
+.bg-white
+  background: $white !important
+
+.bg-gray-30
+  background-color: $gray-30 !important
+
+//Shadow
+.shodow-3
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2) !important
+
+.shodow-10
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.2) !important
+
+//Position 定位設置
+
+.left--50
+  left: -50px !important
+
+.left-10
+  left: 10px !important
+
+.left-20
+  left: 20px !important
+
+.left-30
+  left: 30px !important
+
+.right--50
+  right: -50px !important
+
+.right-30
+  right: 30px !important
+
+.right-1pc
+  right: 1% !important
+
+.top-50px
+  top: 50px !important
+
+.top-10pc
+  top: 10% !important
+
+.top-12pc
+  top: 12% !important
+
+.top-40pc
+  top: 40% !important
+
+.bottom-10
+  bottom: 10px !important
+
+.bottom-20
+  bottom: 20px !important
+
+.bottom-10pc
+  bottom: 10pc !important
+
+//Color
+.white
+  color: $white !important
+
+.black
+  color: $black !important
+
+.red
+  color: red !important
+
+.brand-orange
+  color: $brand-orange !important
+
+.brand-orange-hover
+  &:hover
+    color: $brand-orange !important
+
+//Image 
+.img-obj-cover
+  object-fit: cover !important
+
+
+//Z-index
+.z-index-1
+  z-index: 1 !important
+
+.z-index-500
+  z-index: 500 !important
+
+.z-index-1000
+  z-index: 1000 !important
+
+//Position
+.position-absolute-center
+  position: absolute !important
+  left: 50% !important
+  top: 50% !important
+  transform: translate(-50%,-50%) !important
+
+.position-absolute-x-center
+  position: absolute !important
+  left: 50% !important
+  transform: translateX(-50%) !important
+
+//Container
+.container-1100
+  max-width: 1100px !important
+
+//Overflow
+.overflow-x
+  overflow-x: clip !important
+
+.hr
+  background-color: $brand-orange !important
+  height: 1px !important
+  margin-left: auto !important
+  margin-right: auto !important
+
+// 文字超過3行不顯示
+.ellipsis
+  display: -webkit-box
+  overflow: hidden
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  white-space: normal
+  text-overflow: ellipsis
+
+//幻燈片設定
+.swiper
+  width: 100%
+  height: 100%
+
+.swiper-slide
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  -webkit-justify-content: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -webkit-align-items: center
+  align-items: center
+
+.swiper-pagination-bullet
+  width: 50px
+  height: 2px
+  border-radius: 5px
+  background-color: $brand-orange
+  &:hover
+    opacity: 1
+    background-color: $brand-blue
+
+.swiper-pagination-bullet-active
+  background-color: $brand-orange
+
+.swiper-button-next
+  color: $brand-orange
+  &:hover
+    color: $brand-blue
+
+.swiper-button-prev
+  color: $brand-orange
+  &:hover
+    color: $brand-blue
+
+.service-process-swiper-pagination
+  .swiper-pagination-bullet-active
+    background-color: $white
+
+//按鈕陰影
+.btn-form
+  color: $white !important
+  background-color: $brand-orange !important
+  width: 100% !important
+  padding: 10px 20px !important
+  text-align: center !important
+  border-radius: 10px !important
+  &:hover
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2) !important
+
+.btn-accordion
+  &:hover,&:focus
+    background-color: $white !important
+    color: $brand-orange !important
+
+.btn-about-us-read-more
+  padding: 8px 32px
+  border: solid 1px $black
+  &:hover
+    color: $white !important
+    background-color: $brand-orange !important
+    border: solid 1px $brand-orange !important
+
+.btn-read-more
+  padding: 4px 32px
+  color:  $gray-50
+  border-radius: 100px
+  border: solid 1px $gray-50
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+  &:hover
+    color: $white !important
+    background-color: $brand-orange !important
+    border: solid 1px $brand-orange !important
+
+//Input
+.input-form
+  background-color: $white !important
+  border: solid 1px $gray-30 !important
+  padding: 10px 20px !important
+  border-radius: 10px !important
+  width: 100% !important
+
+.input-form:focus-visible
+  outline: $brand-orange auto 1px !important
+
+.input-form::placeholder
+  color: $gray-30 !important
+  position: relative
+
+
+//accordion-button FAQ選單按鈕
+
+.accordion-button:focus
+    border-color: $white
+    box-shadow: 0 0 0 rgba(0,0,0,0)
+
+.accordion-button:not(.collapsed)
+  color: $brand-orange !important
+  background-color: $white !important
+  box-shadow: 0 0 0 rgb(0,0,0,0) !important
+
+//Flex
+.flex-20pc
+  flex: 20%
+
+.flex-80pc
+  flex: 80%
